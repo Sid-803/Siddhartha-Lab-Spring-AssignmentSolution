@@ -47,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	            .antMatchers("/students/saveForm","/students/delete").hasAuthority("ADMIN")
 	            .anyRequest().authenticated()
 	            .and()
-	            .formLogin().loginProcessingUrl("/login").successForwardUrl("/students/list").permitAll()
+	            .formLogin().loginProcessingUrl("/login").successForwardUrl("/students/printstudents").permitAll()
 	            .and()
 	            .logout().logoutSuccessUrl("/login").permitAll()
 	            .and()
